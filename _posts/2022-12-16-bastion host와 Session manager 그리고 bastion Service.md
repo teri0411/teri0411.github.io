@@ -7,11 +7,12 @@ author_profile: false
 sidebar:
  nav: "docs"
 #search: false
+
 ---
 
-![bastion1](https://user-images.githubusercontent.com/75375944/208288367-737063e6-f2df-41ee-af57-ec3430de481f.png)
+# **bastion host, bastion service 그리고 Session manager**
 
-# **bastion host, Session manager 그리고  bastion service**
+![bastion1](https://user-images.githubusercontent.com/75375944/208288367-737063e6-f2df-41ee-af57-ec3430de481f.png)
 
 [AWS Systems Manager Session Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html)
 
@@ -27,7 +28,7 @@ sidebar:
 
 [14 Best Practices to Secure SSH Bastion Host](https://goteleport.com/blog/security-hardening-ssh-bastion-best-practices/)
 
-이것저것 읽어보면서 정리한 Bastion host의 단점으로는 우선 관리할 전용서버가 필요하다. AWS의 경우 VM인 EC2로 생성하여 VPN과 연결하곤 하는데, 단순히 점프용도로 사용하는 케이스가 많다.
+이것저것 읽어보면서 정리한 Bastion host의 단점으로는 우선 관리할 전용서버가 필요하다. AWS의 경우 VM인 EC2로 생성하여 VPN과 연결하곤 하는데, 단순히 점프용도로 사용하는 케이스가 많다. 
 
 본인은 프록시 용도로 활용하는 bastion host를 보면서 해커가 bastion host에 침투할 수 있는 경우, 방화벽을 비활성화할 수 있지 않을까라는 생각이 들었다. 구글링해보니 Bastion host가 손상되는 경우는 점프용도로만 쓸 경우 흔치는 않고, sudo를 읽어 관리자의 패스워드를 하이재킹한 경우가 있었다고 한다. 그래서 Bastion Host에서 sudo를 사용하려면 OTP에만 강제하도록 해야하고 이게 힘들면 이중 인증절차(2FA)를 쓰길 권유한다. 또 가장 좋은 방법은 bastion host를 읽기전용 이미지에서 실행하고 업그레이드나 관리 작업을 전혀 수행하지 못하게 하는 것 같다. 여기에 단일 계정이 아니라 권한을 격리시키면 더 좋을 것 같다.
 
@@ -45,14 +46,14 @@ AWS는 bastion host 없이 프라이빗 인프라에 안전하게 연결할 수 
 
 터널링 SSH 없이 SSM을 사용하면 다음과 같은 이점이 있다.
 
-- 세션 중에 실행된 명령과 결과를 기록합니다. Session Manager 내에서 SSH를 사용하면 모두 암호화
+- 세션 중에 실행된 명령과 결과를 기록. Session Manager 내에서 SSH를 사용하면 모두 암호화
 - SSH 키를 관리할 필요가 없다
 - Shell access는 IAM(Identity and Access Management) 정책 내에 완전히 포함되어 있으므로 해당 접근을 제어하는 하나의 통로가 있다
 - 원격 액세스를 활성화하기 위해 공용 IP 주소를 가상 머신과 연결할 필요는 없다
 - SSH 다중화 공격의 가능성을 제거
 - IAM 자격 증명에 대한 액세스(예: SSH 또는 RDP)를 통합
 - 원격 액세스를 위해 메타데이터 및 전체 세션 로그(가능한 경우)를 캡처
-- Session Manager는 액세스 및 로깅과 관련된 다양한 서비스에 대해 VPC 엔드포인트를 사용할 수 있으므로 인터넷에 대한 노출이 최소화됩니다
+- Session Manager는 액세스 및 로깅과 관련된 다양한 서비스에 대해 VPC 엔드포인트를 사용할 수 있으므로 인터넷에 대한 노출이 최소화
 
 **— AWS System Manager구성 시 필요한것**
 
@@ -61,7 +62,10 @@ AWS는 bastion host 없이 프라이빗 인프라에 안전하게 연결할 수 
 - 리소스에서 SSM을 허용하고 로그를 bucket으로 전송 하는 **IAM 역할**
 - **SSM agent** 가 있는 EC2 인스턴스
 
+<aside>
 💡 최소한 로그 전용 AWS 계정이 있는 것이 좋습니다.
+
+</aside>
 
 ## Bastion Service
 
@@ -85,7 +89,11 @@ Bastion Service에 관심이 생긴 이유는 문제 해결과 패치 및 업데
 
 ![bastion3](https://user-images.githubusercontent.com/75375944/208288372-158c7629-8c57-4605-b238-170762f770b5.png)
 
-출처: [How Teleport Works: Basic Concepts | Teleport](https://goteleport.com/how-it-works)
+출처: https://goteleport.com/how-it-works
+
+    
+
+    
 
 Bastion Service 중 Teleport는 SSH 서버, Windows 서버 및 desktop, Kubernetes 클러스터, 웹 애플리케이션 또는 데이터베이스에 액세스할 수 있다.
 
@@ -99,15 +107,17 @@ Bastion Service 중 Teleport는 SSH 서버, Windows 서버 및 desktop, Kubernet
   
   - 이중 인증 절차(2FA)를 기본적으로 갖추고 있어 보안이 뛰어남(앞서 얘기한 Bastion host의 단점을 보완)
 
+    
+
 ## 짤막한 결론
 
 여차저차 최근 진행하는 Peak Triffic Test 프로젝트에 AWS Session Manager 먼저 도입해보고나서 Teleport로 접근제어하는 방식도 한번 적용을 고려해봐야겠다.
 
 [Teleport: Identity-Native Infrastructure Access. Faster. More Secure.](https://goteleport.com/)
 
-그외 유용한 레퍼런스 
+그외 유용한 레퍼런스
 
-[New - Port Forwarding Using AWS System Manager Session Manager](https://aws.amazon.com/ko/blogs/aws/new-port-forwarding-using-aws-system-manager-sessions-manager/)
+[New - Port Forwarding Using AWS System Manager Session Manager ](https://aws.amazon.com/ko/blogs/aws/new-port-forwarding-using-aws-system-manager-sessions-manager/)
 
 [Running a bastion host/jumpbox on Fargate](https://blog.deleu.dev/running-a-bastion-host-on-fargate/)
 

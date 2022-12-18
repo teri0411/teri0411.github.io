@@ -11,9 +11,11 @@ sidebar:
 
 # Nat instance, Nat gateway 무엇을 사용해야할까
 
-# **Nat instance**
+### NAT = Network Address Translation
 
-NAT = Network Address Translation
+# **Nat Instance**
+
+![nat-1](https://user-images.githubusercontent.com/75375944/208288467-a5632b7a-7552-4f88-b2bc-a7315cda297f.png)
 
   
 
@@ -26,9 +28,9 @@ NAT = Network Address Translation
 - 개인 서브넷에서 NAT 인스턴스로 트래픽을 라우팅하도록 라우팅 테이블을 구성해야 함
 - Bastion 서버로 겸용가능(병목우려)
 
-  
+    
 
-
+    
 
 ![nat-2](https://user-images.githubusercontent.com/75375944/208288475-8321f22f-8c02-4008-a00e-5d11b9ef087f.png)
 
@@ -63,13 +65,10 @@ AWS 관리 NAT, 더 높은 대역폭, 고가용성(HA), 관리 없음
 - 최대 45Gbps의 자동 확장 기능을 갖춘 5Gbps 대역폭
 - 관리할 Security Group 없음 (SG에 영향받지않음)
 
-  
-
-  
-
 ![nat-4](https://user-images.githubusercontent.com/75375944/208288481-dcd0cb15-ac68-448b-8a1d-2392c61ae678.png)
 
-- 프로젝트에 Nat gateway로 선택한 이유
+프로젝트에 Nat gateway로 선택한 이유
+
 1. Nat instance는 EC2이기때문에 꺼지면 죽는다. 죽으면 서비스가 중지된다.(ASG적용 , Multiple AZ 적용 등 필요)
 2. 성능이나 유지관리면에서 Nat instance보다 우월함.(다량의 트래픽테스트에서 고가용성확보에 유리)
 3. NAT 트래픽 처리에 최적화되어 있다.

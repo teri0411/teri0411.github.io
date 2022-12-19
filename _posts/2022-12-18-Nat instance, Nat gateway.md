@@ -17,8 +17,6 @@ sidebar:
 
 ![nat-1](https://user-images.githubusercontent.com/75375944/208288467-a5632b7a-7552-4f88-b2bc-a7315cda297f.png)
 
-  
-
 ![nat-1](https://user-images.githubusercontent.com/75375944/208288467-a5632b7a-7552-4f88-b2bc-a7315cda297f.png)
 
 - 개인 서브넷의 EC2 인스턴스가 인터넷에 연결할 수 있도록 허용합니다.
@@ -45,12 +43,6 @@ sidebar:
   개인 서브넷에서 수신되는 HTTP/HTTPS 트래픽 허용
   홈 네트워크에서 SSH 허용(인터넷 게이트웨이를 통해 액세스 제공)
   Outbound: 인터넷에 대한 HTTP/HTTPS 트래픽 허용
-
-  
-
-  
-
-  
 
 # **Nat gateway**
 

@@ -1,5 +1,5 @@
 ---
-title: "[AWS]bastion host와 Session manager 그리고 bastion Service"
+title: "[AWS] bastion host와 Session manager 그리고 bastion Service"
 categories: AWS
 tag: [AWS,네트워크, network]
 toc: true

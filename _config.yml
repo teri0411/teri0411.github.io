@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "custom" # "air", "aqua", "contrast", "dark", "dirt",
 locale                   : "ko-KR"
 title                    : "Terry's DevNote"
 title_separator          : "|"
-subtitle                 : "I cherish my time"
+subtitle                 : "눈 크게 뜨고 돌파하자"
 name                     : "Terry(SangYun)"
 description              : "I am an immersive person"
 url                      : "https://teri0411.github.io"
@@ -106,13 +106,10 @@ analytics:
 author:
   name             : "TerryNote"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "테리의 IT 블로그입니다"
+  bio              : "I am in between jobs"
   location         : "South Korea"
   email            : "teri04111@gmail.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:teri04111@gmail.com"
     - label: "linkedin"
       icon: "fas fa-fw fa-link"
       url: "https://www.linkedin.com/in/%EC%83%81%EC%9C%A4-%EC%9D%B4-9b4b3523a/"

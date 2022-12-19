@@ -1,5 +1,5 @@
 ---
-title: "[AWS]Nat instance, Nat gateway"
+title: "[AWS] Nat instance, Nat gateway"
 categories: AWS
 tag: [AWS,네트워크, network]
 toc: true

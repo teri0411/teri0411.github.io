@@ -108,7 +108,7 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am in between jobs"
   location         : "South Korea"
-  email            : "teri04111@gmail.com"
+  #email            : "teri04111@gmail.com"
   links:
     - label: "linkedin"
       icon: "fas fa-fw fa-link"

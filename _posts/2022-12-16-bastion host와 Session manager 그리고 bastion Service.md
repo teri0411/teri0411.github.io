@@ -113,6 +113,24 @@ Bastion Service 중 Teleport는 SSH 서버, Windows 서버 및 desktop, Kubernet
 
 여차저차 최근 진행하는 Peak Triffic Test 프로젝트에 AWS Session Manager 먼저 도입해보고나서 Teleport로 접근제어하는 방식도 한번 적용을 고려해봐야겠다.
 
+
+
+Session Manager 선택이유
+
+- Session Manager는 bastion host처럼 따로 EC2를 생성할 필요없이  SSM으로 접속(비용 절감)
+
+- 세션매니저를 사용하면 계정과 인증키 ,포트 관리가 필요 없어진다. 이는 결국 운영에서 공수가 내려간다. 우리 프로젝트의 주 목적은 Peak Test이지 화이트해킹 테스트가 아니기에 굳이 이 부분에서 초기부터 공수를 늘릴 필요가 없다는 생각이다.
+
+- bastion host의 경우 서버이기때문에 추후에 Scale 정책이 추가로 필요하다.
+
+- 보안에 대한 노출이 없다시피한다.  bastion host의 경우 SSH를 사용하면 보안 그룹 규칙을 통해 포트를 연다. 반면 Systems Manager Session Manager는 IAM 역할을 활용하여 SSH 트래픽에 포트를 노출시키지않고 인스턴스에 연결하여 추적 가능 (보안)
+
+- 그리고 추후에 필요하다면 SSH터널도 사용가능하도록 설정가능하다. (개선가능)
+
+- 단, SSM을 이용할 경우 VPC Private 내의 AWS PaaS로 접근이 불가능(단점)
+  → AWS의 VPC Private 내의 RDS, Memcache 구간은 로컬에서 접근불가하다는 의미
+  → AWS SSM의 포트포워딩 기능과 리눅스 socat 패키지를 이용하면 접근가능(개선가능)
+
 [Teleport: Identity-Native Infrastructure Access. Faster. More Secure.](https://goteleport.com/)
 
 그외 유용한 레퍼런스

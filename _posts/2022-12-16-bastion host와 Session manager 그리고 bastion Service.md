@@ -1,4 +1,8 @@
 ---
+layout: post
+color: rgb(250, 50, 50)
+feature-img: "assets/img/feature-img/aws.jpeg"
+thumbnail: "assets/img/thumbnails/feature-img/aws.jpeg"
 title: "[AWS] bastion host와 Session manager 그리고 bastion Service"
 categories: AWS
 tag: [AWS,네트워크, network]

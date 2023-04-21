@@ -1,18 +1,12 @@
 ---
 layout: post
-color: rgb(250, 50, 50)
-feature-img: "assets/img/feature-img/team.jpg"
-thumbnail: "assets/img/thumbnails/feature-img/team.jpg"
-title: "[Peak Test] 트래픽 Peak Test 개발과정 수립"
-categories: Project
-tag: [Project, AWS, devops, Peak Test, traffic peak problem]
-toc: true
-author_profile: false
-sidebar:
- nav: "docs"
-#search: false
-
+title: Traffic Peak Test
+feature-img: "assets/img/portfolio/team.jpg"
+img: "assets/img/portfolio/team.jpg"
+date: 19 September 2022
+tags: [Project, AWS, devops, Peak Test, traffic peak problem]
 ---
+
 
 # **Project Load(Cloud Enginner, Devops, SRE)**
 

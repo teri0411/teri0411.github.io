@@ -1,15 +1,15 @@
 # SITE CONFIGURATION
-baseurl: "/Type-on-Strap"
+baseurl: "/teri0411.github.io"
 url: "https://teri0411.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
-title: Type on Strap                                    # site's title
+title:  MLOps + DevOps + InFra + Cloud 비빔밥 블로그                    # site's title
 description: "A website with blog posts and pages"      # used by search engines
 avatar: assets/img/triangle.png                         # Empty for no avatar in navbar
 favicon: assets/favicon.ico                             # Icon displayed in the tab
 
 # Header and footer text
-header_text: 끄적끄적 </code> MLOps </code> Trip <code> ?</code>  # Change Blog header text
+header_text: 안녕하세요 </code> 저는 </code> 바보입니다? <code> ?</code>  # Change Blog header text
 header_feature_image: assets/img/header/triangular.jpeg
 header_feature_image_responsive: true
 footer_text: >
@@ -25,7 +25,7 @@ color_image: /assets/img/lineart.png                    # A bit transparent for 
 # For layout customization, go to the "_sass > base" folder, and check "_variables.scss"
 katex: true                                             # Enable if using math markup
 mermaid: default                                        # Enable mermaid-js for diagrams, use theme: base, forest, dark, default, neutral
-google_analytics:                                       # Tracking ID, e.g. "UA-000000-01"
+google_analytics: G-H8XWXCH6ZG                     # Tracking ID, e.g. "UA-000000-01"
 cookie_consent: false                                   # To respect the usage of cookies
 color_theme: auto                                       # auto, dark or light
 

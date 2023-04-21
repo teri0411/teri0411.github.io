@@ -1,5 +1,9 @@
 ---
+layout: post
+color: rgb(250, 50, 150)
 title: "웹이란?"
+feature-img: "assets/img/feature-img/web.jpeg"
+thumbnail: "assets/img/thumbnails/feature-img/web.jpeg"
 categories: Web
 tag: [Web, 웹, 웹서비스, 백엔드]
 toc: true

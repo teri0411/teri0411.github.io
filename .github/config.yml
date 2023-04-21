@@ -23,5 +23,5 @@ requestInfoOn:
 
 # *OPTIONAL* Add a list of people whose Issues/PRs will not be commented on (keys must be GitHub usernames)
 requestInfoUserstoExclude:
-  - sylhare
+  - terry
   - # the other users you wanna add here

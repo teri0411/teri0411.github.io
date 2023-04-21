@@ -1,4 +1,8 @@
 ---
+layout: post
+color: rgb(250, 50, 50)
+feature-img: "assets/img/feature-img/network.jpg"
+thumbnail: "assets/img/thumbnails/feature-img/network.jpg"
 title: "[네트워크 기초]MAC주소, IP주소, Port번호"
 categories: Network
 tag: [Network, MAC, IP, Port]

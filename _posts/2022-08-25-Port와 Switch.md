@@ -1,4 +1,8 @@
 ---
+layout: post
+color: rgb(250, 50, 50)
+feature-img: "assets/img/feature-img/network.jpg"
+thumbnail: "assets/img/thumbnails/feature-img/network.jpg"
 title: "[네트워크 기초]Port와 Switch"
 categories: Network
 tag: [Network, port, swtich]

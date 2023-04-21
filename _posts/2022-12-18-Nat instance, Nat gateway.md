@@ -1,4 +1,8 @@
 ---
+layout: post
+color: rgb(250, 50, 50)
+feature-img: "assets/img/feature-img/aws.jpeg"
+thumbnail: "assets/img/thumbnails/feature-img/aws.jpeg"
 title: "[AWS] Nat instance, Nat gateway"
 categories: AWS
 tag: [AWS,네트워크, network]

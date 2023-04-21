@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Traffic Peak Test
-feature-img: "assets/img/portfolio/team.jpg"
 img: "assets/img/portfolio/team.jpg"
 date: 19 September 2022
 tags: [Project, AWS, devops, Peak Test, traffic peak problem]

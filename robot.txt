@@ -1,4 +1,4 @@
   User-agent: *
  Allow: /
 
- Sitemap: https://junsk1016.github.io/sitemap.xml
+ Sitemap: https://teri0411.github.io/sitemap.xml

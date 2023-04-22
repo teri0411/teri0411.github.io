@@ -4,7 +4,7 @@ url: "https://teri0411.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
 title:  MLOps & DevOps & infra                    # site's title
-description: "A website with blog posts and pages"      # used by search engines
+description: "MLOps & DevOps & infra"      # used by search engines
 avatar: assets/img/triangle.png                         # Empty for no avatar in navbar
 favicon: assets/favicon.ico                             # Icon displayed in the tab
 
@@ -16,7 +16,7 @@ footer_text: >
    미래의 나를 기대하며 </a>
 
 # Blog
-excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
+excerpt: truncate                                           # Or "truncate" (first 250 characters), "false" to disable
 post_navigation: true
 color_image: /assets/img/lineart.png                    # A bit transparent for color posts.
 
@@ -26,7 +26,7 @@ color_image: /assets/img/lineart.png                    # A bit transparent for 
 katex: true                                             # Enable if using math markup
 mermaid: default                                        # Enable mermaid-js for diagrams, use theme: base, forest, dark, default, neutral
 google_analytics: G-H8XWXCH6ZG                     # Tracking ID, e.g. "UA-000000-01"
-cookie_consent: false                                   # To respect the usage of cookies
+cookie_consent: true                                   # To respect the usage of cookies
 color_theme: auto                                       # auto, dark or light
 
 # Comments
@@ -34,11 +34,11 @@ comments:
   disqus_shortname:                                     # Your discus shortname for comments
   cusdis_app_id:                                        # Your cusdis data-app-id
   utterances:                                           # Enable by filling below information. For more info, go to https://utteranc.es
-    repo:                                               # your public comments repository (e.g. owner/repo)
-    issue-term:                                         # Issue term (e.g. "comment" consider issues with this word in the title as comments)
+    repo: teri0411/teri0411.io                                     # your public comments repository (e.g. owner/repo)
+    issue-term: comment                                        # Issue term (e.g. "comment" consider issues with this word in the title as comments)
 
 # PAGINATION
-paginate: 5
+paginate: 8
 paginate_path: "/blog/page:num"
 
 # PORTFOLIO
